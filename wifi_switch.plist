@@ -1,0 +1,26 @@
+<!-- move this script to /System/Library/LaunchDaemons directory. -->
+<!-- if you want to activate this script right now, do "sudo launchctl load /System/Library/LaunchDaemons/wifi_switch.plist". -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>Label</key>
+<string>local.wifi_switch</string>
+<key>ProgramArguments</key>
+<array>
+<string>/bin/bash</string>
+<string>/Users/akira/bin/restart_dolipo.sh</string>
+</array>
+<key>RunAtLoad</key>
+<true/>
+<key>StandardErrorPath</key>
+<string>/dev/null</string>
+<key>StandardOutPath</key>
+<string>/dev/null</string>
+<key>WatchPaths</key>
+<array>
+<string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
+</array>
+</dict>
+</plist>
